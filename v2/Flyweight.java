@@ -30,7 +30,6 @@ public class Flyweight extends JFrame{
         content.add(startDrawing, BorderLayout.SOUTH);
 
         startDrawing.addActionListener(new ActionListener(){
-
             @Override
             public void actionPerformed(ActionEvent e) {
                 Graphics g = drawPanel.getGraphics();
@@ -40,16 +39,12 @@ public class Flyweight extends JFrame{
                     rect.draw(g, getRand(), getRand(), getRand(), getRand());
                 }
 
-                long endTime = System.currentTimeMillis();
-
+                System.out.println("Done");
             }
-
         });
 
         this.add(content);
         this.setVisible(true);
-        
-        
     }
 
     private Color getRandColor(){
@@ -61,12 +56,8 @@ public class Flyweight extends JFrame{
         return (int)(Math.random()*1000);
     }
 
-
-
     public static void main(String[] args){
         new Flyweight();
 
     }
-
-    
 }

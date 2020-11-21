@@ -2,7 +2,7 @@ package v1;
 
 import java.awt.*;
 
-public class MyRect {
+public class MyRect implements Shape{
    private Color color; 
    private int x1, y1, x2, y2;
 
@@ -15,8 +15,10 @@ public class MyRect {
        System.out.println("Creating " + color + " rectangle");
    }
 
+   @Override
    public void draw(Graphics g){
        g.setColor(color);
        g.fillRect(this.x1, this.y1, this.x2, this.y2);
    }
+
 }

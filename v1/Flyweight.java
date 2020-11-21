@@ -39,17 +39,11 @@ public class Flyweight extends JFrame{
                     MyRect rect = new MyRect(getRandColor(), getRand(), getRand(), getRand(), getRand());
                     rect.draw(g);
                 }
-
-                long endTime = System.currentTimeMillis();
-
+                System.out.println("Done");
             }
-
         });
-
         this.add(content);
         this.setVisible(true);
-        
-        
     }
 
     private Color getRandColor(){
@@ -60,8 +54,6 @@ public class Flyweight extends JFrame{
     private int getRand(){
         return (int)(Math.random()*1000);
     }
-
-
 
     public static void main(String[] args){
         new Flyweight();
